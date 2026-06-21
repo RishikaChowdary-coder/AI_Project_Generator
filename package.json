@@ -1,0 +1,26 @@
+{
+  "name": "ai_project_generator",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/RishikaChowdary-coder/AI_Project_Generator#readme",
+  "bugs": {
+    "url": "https://github.com/RishikaChowdary-coder/AI_Project_Generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RishikaChowdary-coder/AI_Project_Generator.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

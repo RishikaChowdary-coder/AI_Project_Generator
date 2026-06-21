@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Project Generator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo-section">
+        <div class="logo-icon">🚀</div>
+        <div class="logo-text">
+            <h2>AI Project Generator</h2>
+            <span>Build. Learn. Innovate.</span>
+        </div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/generatedProjects.html">Projects</a></li>
+        <li><a href="pages/savedProjects.html">Saved</a></li>
+        <li><a href="pages/about.html">About</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+    <h1>Generate Innovative Student Projects</h1>
+
+    <p>
+        AI-powered project idea generation with
+        tech stacks, architecture, roadmap and README.
+    </p>
+
+</section>
+
+<section class="generator-card">
+
+    <input
+        type="text"
+        id="studentName"
+        placeholder="Student Name"
+    >
+
+    <select id="branch">
+        <option>CSE</option>
+        <option>AIML</option>
+        <option>ECE</option>
+        <option>EEE</option>
+    </select>
+
+    <select id="year">
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+    </select>
+
+    <select id="domain">
+        <option>Artificial Intelligence</option>
+        <option>Web Development</option>
+        <option>Cyber Security</option>
+        <option>Cloud Computing</option>
+    </select>
+
+    <select id="difficulty">
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
+    </select>
+
+    <button onclick="generateProject()">
+        Generate Project
+    </button>
+
+    <button onclick="saveProject()">
+        Save Project
+    </button>
+
+    <button onclick="downloadReadme()">
+        Download README
+    </button>
+
+</section>
+
+<section class="output-card">
+
+    <h2>Generated Project</h2>
+
+    <div id="projectOutput">
+        Your AI project will appear here...
+    </div>
+
+</section>
+
+<script src="js/generate.js"></script>
+<script src="js/saveProject.js"></script>
+<script src="js/downloadReadme.js"></script>
+
+</body>
+</html>
