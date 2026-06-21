@@ -8,6 +8,10 @@ require("./routes/projectRoutes");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("AI Project Generator Backend is Running!");
+});
+
 app.use(cors());
 app.use(express.json());
 
