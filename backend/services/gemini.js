@@ -1,16 +1,3 @@
-const {
-GoogleGenerativeAI
-} =
-require("@google/generative-ai");
-
-const buildPrompt =
-require("../utils/promptBuilder");
-
-const genAI =
-new GoogleGenerativeAI(
-process.env.GEMINI_API_KEY
-);
-
 async function generateIdea(
 studentName,
 branch,
@@ -19,25 +6,42 @@ domain,
 difficulty
 ){
 
-const model =
-genAI.getGenerativeModel({
-model:"gemini-1.5-flash"
-});
+return `
+🚀 Project Name:
+AI ${domain} Project Generator
 
-const prompt =
-buildPrompt(
-studentName,
-branch,
-year,
-domain,
-difficulty
-);
+📖 Description:
+An AI-powered platform that helps ${branch}
+students generate innovative project ideas.
 
-const result =
-await model.generateContent(prompt);
+✨ Features:
+• Project Idea Generation
+• Tech Stack Suggestions
+• Architecture Diagrams
+• README Generator
+• Difficulty Analysis
 
-return result.response.text();
+🛠 Tech Stack:
+HTML
+CSS
+JavaScript
+Node.js
+Express.js
+
+🏗 Architecture:
+Frontend → Backend → AI Engine
+
+📅 Roadmap:
+Phase 1 - UI Development
+Phase 2 - Backend APIs
+Phase 3 - AI Integration
+Phase 4 - Deployment
+
+🔮 Future Scope:
+Mobile Application
+Cloud Deployment
+Team Collaboration
+`;
 }
 
-module.exports =
-generateIdea;
+module.exports = generateIdea;

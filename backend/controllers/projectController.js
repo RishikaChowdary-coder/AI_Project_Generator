@@ -30,10 +30,13 @@ async (req, res) => {
 
     } catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: error.message
-        });
+    console.error("FULL ERROR:");
+    console.error(error);
 
-    }
+    res.status(500).json({
+        success: false,
+        message: error.message
+    });
+
+}
 };

@@ -45,7 +45,11 @@ async function generateProject() {
         const data = await response.json();
 
         document.getElementById("projectOutput").innerHTML =
-            `<pre>${data.project}</pre>`;
+`
+<div class="generated-content">
+${data.project.replace(/\n/g,"<br>")}
+</div>
+`;
 
         localStorage.setItem(
             "latestProject",

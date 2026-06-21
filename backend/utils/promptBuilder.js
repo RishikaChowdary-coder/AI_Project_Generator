@@ -1,51 +1,61 @@
 function buildPrompt(
-studentName,
-branch,
-year,
-domain,
-difficulty
-){
+    studentName,
+    branch,
+    year,
+    domain,
+    difficulty
+) {
 
 return `
 
-Generate a unique student project.
+Generate 10 innovative project ideas.
 
-Student:
-${studentName}
+Student Details:
+Name: ${studentName}
+Branch: ${branch}
+Year: ${year}
+Domain: ${domain}
+Difficulty: ${difficulty}
 
-Branch:
-${branch}
-
-Year:
-${year}
-
-Domain:
-${domain}
-
-Difficulty:
-${difficulty}
-
-Return:
+For each project include:
 
 1. Project Name
-
 2. Description
-
-3. Features
-
-4. Tech Stack
-
-5. Architecture Diagram
-
-6. Development Roadmap
-
-7. GitHub README
-
+3. Problem Solved
+4. Features
+5. Tech Stack
+6. Architecture Overview
+7. Development Roadmap
 8. Future Scope
+9. GitHub README Summary
+
+Make all 10 projects unique.
+
+Format:
+
+=========================
+PROJECT 1
+=========================
+
+Project Name:
+Description:
+Problem Solved:
+Features:
+Tech Stack:
+Architecture:
+Roadmap:
+Future Scope:
+README Summary:
+
+=========================
+PROJECT 2
+=========================
+
+...
+
+Continue until PROJECT 10.
 
 `;
-
 }
 
-module.exports =
-buildPrompt;
+module.exports = buildPrompt;
